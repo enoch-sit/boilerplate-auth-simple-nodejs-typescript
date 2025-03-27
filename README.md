@@ -21,11 +21,12 @@ A robust authentication system built with TypeScript, Express, and MongoDB. Feat
    - Open Command Prompt as Administrator.
    - Navigate to the MongoDB bin directory (e.g., `C:\Program Files\MongoDB\Server\6.0\bin`).
    - `mkdir C:\data\db`
+   - `mkdir C:\data\log`
    - Run `mongod --dbpath C:\data\db` to start the MongoDB server.
 
 3. **Test Connection**:
    - Open another Command Prompt.
-   - Run `mongo` to connect to the MongoDB shell.
+   - Run `mongosh` to connect to the MongoDB shell. not `mongo`
    - Use `show dbs` to list databases and confirm the connection.
 
 ### Setting Up MongoDB on Linux
