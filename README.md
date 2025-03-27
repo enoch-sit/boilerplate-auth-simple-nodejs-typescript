@@ -4,35 +4,96 @@ A robust authentication system built with TypeScript, Express, and MongoDB. Feat
 
 ## Features
 
-**User Registration**: Secure signup with email verification
+- **User Registration**: Secure signup with email verification
+- **JWT Authentication**: Access and refresh tokens with expiration
+- **Email Integration**: Verification emails and password reset functionality
+- **Protected Routes**: Middleware for authenticated endpoints
+- **Password Management**: Secure hashing and reset functionality
+- **Database Integration**: MongoDB for data persistence
 
-**JWT Authentication**: Access and refresh tokens with expiration
+### Setting Up MongoDB on Windows
 
-**Email Integration**: Verification emails and password reset functionality
+1. **Download and Install MongoDB**:
+   - Visit the MongoDB download page and download the latest version for Windows.
+   - Follow the installation instructions to install MongoDB Community Server.
 
-**Protected Routes**: Middleware for authenticated endpoints
+2. **Start MongoDB Service**:
+   - Open Command Prompt as Administrator.
+   - Navigate to the MongoDB bin directory (e.g., `C:\Program Files\MongoDB\Server\6.0\bin`).
+   - Run `mongod --dbpath C:\data\db` to start the MongoDB server.
 
-**Password Management**: Secure hashing and reset functionality
+3. **Test Connection**:
+   - Open another Command Prompt.
+   - Run `mongo` to connect to the MongoDB shell.
+   - Use `show dbs` to list databases and confirm the connection.
 
-**Database Integration**: MongoDB for data persistence
+### Setting Up MongoDB on Linux
 
-**Environment Configuration**: Separate settings for development and production
+1. **Install MongoDB**:
+   - For Ubuntu/Debian:
+
+     ```bash
+     sudo apt-get install -y mongodb-org
+     ```
+
+   - For CentOS/RHEL:
+
+     ```bash
+     sudo yum install -y mongodb-org
+     ```
+
+2. **Start MongoDB Service**:
+   - Start the service with:
+
+     ```bash
+     sudo systemctl start mongod
+     ```
+
+   - Enable MongoDB to start on boot:
+
+     ```bash
+     sudo systemctl enable mongod
+     ```
+
+3. **Test Connection**:
+   - Connect to MongoDB with:
+
+     ```bash
+     mongo
+     ```
+
+   - Use `show dbs` to list databases and confirm the connection.
+
+### Setting Up MongoDB on AWS
+
+1. **Create an Amazon DocumentDB Cluster**:
+   - Navigate to the AWS Management Console.
+   - Go to the Amazon DocumentDB service.
+   - Create a new cluster, choosing instance type and other settings as needed.
+
+2. **Connect to DocumentDB**:
+   - Use the AWS CLI or SDK to connect to your DocumentDB cluster.
+   - Example connection string:
+
+     ```bash
+     mongodb://username:password@docdb-2025-03-27.cluster-c123456789abcdef0.c123456789abcdef0.docdb.amazonaws.com:27017/?ssl=true&ssl_ca_certs=rds-combined-ca-bundle.pem
+     ```
+
+3. **Test Connection**:
+   - Use a MongoDB client or the `mongo` shell to connect to your DocumentDB instance.
+   - Use `show dbs` to list databases and confirm the connection.
+
+- **Environment Configuration**: Separate settings for development and production
 
 ## Technologies
 
-**Backend**: Node.js, Express
-
-**Language**: TypeScript
-
-**Database**: MongoDB, Mongoose
-
-**Authentication**: JSON Web Tokens (JWT)
-
-**Email**: Nodemailer (MailHog for development, AWS SES for production)
-
-**Security**: Helmet, rate limiting, CORS
-
-**Logging**: Winston
+- **Backend**: Node.js, Express
+- **Language**: TypeScript
+- **Database**: MongoDB, Mongoose
+- **Authentication**: JSON Web Tokens (JWT)
+- **Email**: Nodemailer (MailHog for development, AWS SES for production)
+- **Security**: Helmet, rate limiting, CORS
+- **Logging**: Winston
 
 ## Quick Start
 
@@ -45,12 +106,14 @@ A robust authentication system built with TypeScript, Express, and MongoDB. Feat
 ### Installation
 
 1. **Clone the repository**:
+
    ```bash
    git clone https://github.com/enoch-sit/boilerplate-auth-simple-nodejs-typescript.git
    cd boilerplate-auth-simple-nodejs-typescript
    ```
 
 2. **Install dependencies**:
+
    ```bash
    npm install
    ```
@@ -60,6 +123,7 @@ A robust authentication system built with TypeScript, Express, and MongoDB. Feat
    • Use the templates provided in the project documentation.
 
 4. **Start the development server**:
+
    ```bash
    npm run dev
    ```
@@ -81,9 +145,11 @@ A robust authentication system built with TypeScript, Express, and MongoDB. Feat
 ### Email Setup
 
 • **Development**: Use MailHog (included in Docker setup)
+
   ```bash
   docker run -d -p 1025:1025 -p 8025:8025 mailhog/mailhog
   ```
+
 • **Production**: Configure AWS SES or another SMTP service.
 
 ## API Endpoints
