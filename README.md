@@ -20,6 +20,7 @@ A robust authentication system built with TypeScript, Express, and MongoDB. Feat
 2. **Start MongoDB Service**:
    - Open Command Prompt as Administrator.
    - Navigate to the MongoDB bin directory (e.g., `C:\Program Files\MongoDB\Server\6.0\bin`).
+   - `mkdir C:\data\db`
    - Run `mongod --dbpath C:\data\db` to start the MongoDB server.
 
 3. **Test Connection**:
