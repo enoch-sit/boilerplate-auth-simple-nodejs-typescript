@@ -4,23 +4,35 @@ A robust authentication system built with TypeScript, Express, and MongoDB. Feat
 
 ## Features
 
-• **User Registration**: Secure signup with email verification
-• **JWT Authentication**: Access and refresh tokens with expiration
-• **Email Integration**: Verification emails and password reset functionality
-• **Protected Routes**: Middleware for authenticated endpoints
-• **Password Management**: Secure hashing and reset functionality
-• **Database Integration**: MongoDB for data persistence
-• **Environment Configuration**: Separate settings for development and production
+**User Registration**: Secure signup with email verification
+
+**JWT Authentication**: Access and refresh tokens with expiration
+
+**Email Integration**: Verification emails and password reset functionality
+
+**Protected Routes**: Middleware for authenticated endpoints
+
+**Password Management**: Secure hashing and reset functionality
+
+**Database Integration**: MongoDB for data persistence
+
+**Environment Configuration**: Separate settings for development and production
 
 ## Technologies
 
-• **Backend**: Node.js, Express
-• **Language**: TypeScript
-• **Database**: MongoDB, Mongoose
-• **Authentication**: JSON Web Tokens (JWT)
-• **Email**: Nodemailer (MailHog for development, AWS SES for production)
-• **Security**: Helmet, rate limiting, CORS
-• **Logging**: Winston
+**Backend**: Node.js, Express
+
+**Language**: TypeScript
+
+**Database**: MongoDB, Mongoose
+
+**Authentication**: JSON Web Tokens (JWT)
+
+**Email**: Nodemailer (MailHog for development, AWS SES for production)
+
+**Security**: Helmet, rate limiting, CORS
+
+**Logging**: Winston
 
 ## Quick Start
 
